@@ -24,9 +24,9 @@ public class DogTest {
     }
 
     @Test
-    public void dogWalkShouldIncreaseCurrentHappinessByFifteen (){
-        int currentHappiness = dog.getHappiness();
-        dog.walk();
-        assertEquals(currentHappiness + 15, dog.getHappiness());
+    public void dogWalkShouldIncreaseCurrentHappinessByFifteenPerHour (){
+        double currentHappiness = dog.getHappiness();
+        dog.walk(1);
+        assertEquals(currentHappiness + 15 * 1, dog.getHappiness());
     }
 }

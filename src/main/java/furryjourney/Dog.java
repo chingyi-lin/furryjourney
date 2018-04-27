@@ -3,7 +3,7 @@ package furryjourney;
 public class Dog extends Pet {
 
     @Override
-    public void walk() {
-        happiness += 15;
+    public void walk(double hour) {
+        happiness += 15 * hour;
     }
 }

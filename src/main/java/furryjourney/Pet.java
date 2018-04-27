@@ -3,9 +3,9 @@ package furryjourney;
  * Job: Understands important factors of pets' reaction
  */
 public class Pet {
-    protected int happiness;
-    protected int satiety;
-    protected int cleaniness;
+    protected double happiness;
+    protected double satiety;
+    protected double cleaniness;
 
     public Pet() {
         happiness = 0;
@@ -13,19 +13,19 @@ public class Pet {
         cleaniness = 0;
     }
 
-    public int getHappiness() {
+    public double getHappiness() {
         return happiness;
     }
 
-    public int getSatiety() {
+    public double getSatiety() {
         return satiety;
     }
 
-    public int getCleaniness() {
+    public double getCleaniness() {
         return cleaniness;
     }
 
-    public void walk() {
-        happiness += 10;
+    public void walk(double hour) {
+        happiness += 10 * hour;
     }
 }
