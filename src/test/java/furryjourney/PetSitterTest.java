@@ -36,7 +36,7 @@ public class PetSitterTest {
     @Test
     public void checkOvertimeShouldReturnTrueForSitterWhoExceedsItsWorkLimit() {
         PetSitter sitter = new PetSitter(0.0001);
-        sitter.washPet(new Cat());
+        sitter.walkPet(new Cat(), 1);
 
         assertTrue(sitter.checkOvertime());
     }
@@ -46,5 +46,13 @@ public class PetSitterTest {
         sitter.resetWorkingHour();
 
         assertEquals(0.0, sitter.getWorkingHour());
+    }
+
+    @Test
+    public void sitterWithTwentyDollarPayRateShouldGetTwentyDollarSalaryForOneHourWork() {
+        PetSitter sitter = new PetSitter(0.0001, 20);
+        sitter.walkPet(new Cat(), 1);
+
+        assertEquals(20.0, sitter.getSalary());
     }
 }

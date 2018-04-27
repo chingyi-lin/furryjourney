@@ -7,13 +7,18 @@ public class PetSitter {
 
     private double workingHour;
     private double MAX_WORKINGHOUR = 40.0;
+    private double payRate;
 
     public PetSitter() {
-        workingHour = 0;
+        workingHour = payRate = 0;
     }
 
     public PetSitter(double MAX_WORKINGHOUR) {
         this.MAX_WORKINGHOUR = MAX_WORKINGHOUR;
+    }
+
+    public PetSitter(double MAX_WORKINGHOUR, double payRate) {
+        this.payRate = payRate;
     }
 
     public double getWorkingHour() {
@@ -41,5 +46,9 @@ public class PetSitter {
 
     public void resetWorkingHour() {
         workingHour = 0;
+    }
+
+    public double getSalary() {
+        return payRate * workingHour;
     }
 }
