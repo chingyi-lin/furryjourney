@@ -1,0 +1,6 @@
+language: java
+jdk:
+  - oraclejdk8
+notifications:
+  email:
+    - chingyi.cylin@gmail.com
