@@ -10,17 +10,17 @@ public class DogTest {
 
     @Test
     public void newDogShouldHaveZeroHappiness (){
-        assertEquals(0 , new Dog().getHappiness());
+        assertEquals(0.0 , new Dog().getHappiness());
     }
 
     @Test
     public void newDogShouldHaveZeroSatiety (){
-        assertEquals(0 , new Dog().getSatiety());
+        assertEquals(0.0 , new Dog().getSatiety());
     }
 
     @Test
     public void newDogShouldHaveZeroCleaniness (){
-        assertEquals(0 , new Dog().getCleaniness());
+        assertEquals(0.0 , new Dog().getCleaniness());
     }
 
     @Test
@@ -29,4 +29,7 @@ public class DogTest {
         dog.walk(1);
         assertEquals(currentHappiness + 15 * 1, dog.getHappiness());
     }
+
+
+
 }

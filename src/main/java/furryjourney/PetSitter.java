@@ -22,7 +22,7 @@ public class PetSitter {
     }
 
     public void washPet(Pet pet) {
-        pet.wash();
+        pet.takeShower();
         workingHour += 1;
     }
 }

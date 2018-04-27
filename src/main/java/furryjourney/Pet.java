@@ -28,4 +28,8 @@ public class Pet {
     public void walk(double hour) {
         happiness += 10 * hour;
     }
+
+    public void takeShower() {
+        cleaniness = 100;
+    }
 }

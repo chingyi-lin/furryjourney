@@ -6,4 +6,6 @@ public class Dog extends Pet {
     public void walk(double hour) {
         happiness += 15 * hour;
     }
+
+
 }
