@@ -7,6 +7,7 @@ import static junit.framework.TestCase.assertEquals;
 public class DogTest {
 
     static Dog dog = new Dog();
+    static double MAX_FACTOR = 100.0;
 
     @Test
     public void newDogShouldHaveZeroHappiness (){
@@ -30,6 +31,10 @@ public class DogTest {
         assertEquals(currentHappiness + 15 * 1, dog.getHappiness());
     }
 
-
+    @Test
+    public void dogTakeShowerShouldReachMaxCleaniness (){
+        dog.takeShower();
+        assertEquals(MAX_FACTOR, dog.getCleaniness());
+    }
 
 }

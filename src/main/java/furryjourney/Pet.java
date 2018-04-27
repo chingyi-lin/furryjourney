@@ -7,6 +7,10 @@ public class Pet {
     protected double satiety;
     protected double cleaniness;
 
+    protected final double MAX_HAPPINESS = 100;
+    protected final double MAX_SATIETY = 100;
+    protected final double MAX_CLEANINESS = 100;
+
     public Pet() {
         happiness = 0;
         satiety = 0;
@@ -30,6 +34,6 @@ public class Pet {
     }
 
     public void takeShower() {
-        cleaniness = 100;
+        cleaniness = MAX_CLEANINESS;
     }
 }
