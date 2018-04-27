@@ -11,4 +11,10 @@ public class Cat extends Pet{
         happiness += 5 * hour;
     }
 
+    @Override
+    public void takeShower() {
+        super.takeShower();
+        happiness -= 5;
+    }
+
 }

@@ -21,4 +21,11 @@ public class CatTest {
         cat.takeShower();
         assertEquals(MAX_FACTOR, cat.getCleaniness());
     }
+
+    @Test
+    public void catTakeShowerShouldDecreaseCurrentHappinessByFive (){
+        double currentHappiness = cat.getHappiness();
+        cat.takeShower();
+        assertEquals(currentHappiness - 5, cat.getHappiness());
+    }
 }
