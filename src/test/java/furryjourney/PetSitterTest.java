@@ -15,4 +15,12 @@ public class PetSitterTest {
 
         assertEquals(currWorkingHour + 1, sitter.getWorkingHour());
     }
+
+    @Test
+    public void washADogOneHourShouldLogAnWorkingHour() {
+        double currWorkingHour = sitter.getWorkingHour();
+        sitter.washPet(new Dog());
+
+        assertEquals(currWorkingHour + 1, sitter.getWorkingHour());
+    }
 }
