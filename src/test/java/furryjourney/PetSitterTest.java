@@ -17,10 +17,18 @@ public class PetSitterTest {
     }
 
     @Test
-    public void washADogOneHourShouldLogAnWorkingHour() {
+    public void washADogOneHourShouldLogOneWorkingHour() {
         double currWorkingHour = sitter.getWorkingHour();
         sitter.washPet(new Dog());
 
         assertEquals(currWorkingHour + 1, sitter.getWorkingHour());
+    }
+
+    @Test
+    public void washACatOneHourShouldLogOneAndHalfWorkingHour() {
+        double currWorkingHour = sitter.getWorkingHour();
+        sitter.washPet(new Cat());
+
+        assertEquals(currWorkingHour + 1.5, sitter.getWorkingHour());
     }
 }

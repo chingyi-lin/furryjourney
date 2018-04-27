@@ -23,6 +23,9 @@ public class PetSitter {
 
     public void washPet(Pet pet) {
         pet.takeShower();
-        workingHour += 1;
+        if (pet instanceof Cat)
+            workingHour += 1.5;
+        else
+            workingHour += 1;
     }
 }
