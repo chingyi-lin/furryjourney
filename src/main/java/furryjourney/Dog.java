@@ -1,5 +1,9 @@
 package furryjourney;
 
+/**
+ * Understands dogs' reaction towards different caring
+ */
+
 public class Dog extends Pet {
 
     @Override
