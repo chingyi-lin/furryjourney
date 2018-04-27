@@ -6,10 +6,14 @@ package furryjourney;
 public class PetSitter {
 
     private double workingHour;
-    private final double MAX_WORKINGHOUR = 40.0;
+    private double MAX_WORKINGHOUR = 40.0;
 
     public PetSitter() {
         workingHour = 0;
+    }
+
+    public PetSitter(double MAX_WORKINGHOUR) {
+        this.MAX_WORKINGHOUR = MAX_WORKINGHOUR;
     }
 
     public double getWorkingHour() {
@@ -27,5 +31,11 @@ public class PetSitter {
             workingHour += 1.5;
         else
             workingHour += 1;
+    }
+
+    public boolean checkOvertime() {
+        if (workingHour > MAX_WORKINGHOUR)
+            return true;
+        return false;
     }
 }

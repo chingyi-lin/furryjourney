@@ -3,6 +3,7 @@ package furryjourney;
 import org.junit.Test;
 
 import static junit.framework.TestCase.assertEquals;
+import static junit.framework.TestCase.assertTrue;
 
 public class PetSitterTest {
 
@@ -30,5 +31,13 @@ public class PetSitterTest {
         sitter.washPet(new Cat());
 
         assertEquals(currWorkingHour + 1.5, sitter.getWorkingHour());
+    }
+
+    @Test
+    public void checkOvertimeShouldReturnTrueForSitterWhoExceedsItsWorkLimit() {
+        PetSitter sitter = new PetSitter(0.0001);
+        sitter.washPet(new Cat());
+
+        assertTrue(sitter.checkOvertime());
     }
 }
