@@ -38,4 +38,8 @@ public class PetSitter {
             return true;
         return false;
     }
+
+    public void resetWorkingHour() {
+        workingHour = 0;
+    }
 }

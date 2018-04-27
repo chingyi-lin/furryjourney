@@ -40,4 +40,11 @@ public class PetSitterTest {
 
         assertTrue(sitter.checkOvertime());
     }
+
+    @Test
+    public void resetWorkingHourShouldSetWorkingHourToZero() {
+        sitter.resetWorkingHour();
+
+        assertEquals(0.0, sitter.getWorkingHour());
+    }
 }
